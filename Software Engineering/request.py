@@ -17,6 +17,7 @@ class movieApi:
 		print(a)
 		print(self.call+title)
 		print(t)
+		return t
 
 
 #"http://www.omdbapi.com/?i=tt3896198&apikey=3db990c4"
