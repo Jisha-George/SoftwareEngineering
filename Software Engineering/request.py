@@ -32,16 +32,19 @@ class movieApi:
 		response = requests.get(self.call+title)
 		a = response.status_code
 		t = response.text
-		print(a)
-		print(self.call+title)
-		print(t)
 		return t
 
 api = movieApi("3db990c4&", "http://www.omdbapi.com/?apikey=")	
 
 def ACME():
-        output = api.queryMovie("t="+"Blade runner")
-        dlg.lineEdit_2.setText(output)
+        jsonString = api.queryMovie("s="+dlg.lineEdit.text())
+        decoded = json.loads(jsonString)
+        val = ""
+        
+        for x in decoded['Search']:
+                val += x['Title']
+                
+        dlg.lineEdit_2.setText(val)
          
 
 app = QtWidgets.QApplication([])
