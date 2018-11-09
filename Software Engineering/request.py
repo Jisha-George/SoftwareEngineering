@@ -37,20 +37,23 @@ class movieApi:
 api = movieApi("3db990c4&", "http://www.omdbapi.com/?apikey=")	
 
 def ACME():
-        jsonString = api.queryMovie("s="+dlg.lineEdit.text())
+        jsonString = api.queryMovie("s="+dlg.searchBar.text())
         decoded = json.loads(jsonString)
-        val = ""
+        val = []
         
         for x in decoded['Search']:
-                val += x['Title']
-                
-        dlg.lineEdit_2.setText(val)
+            val.append(x['Title']) 
+		
+
+        for x in val:
+        	dlg.displayBox.addItem(x)
+        
          
 
 app = QtWidgets.QApplication([])
 dlg = uic.loadUi("ACME.ui")
 
-dlg.pushButton.clicked.connect(ACME)
+dlg.searchButton.clicked.connect(ACME)
 
 dlg.show()
 app.exec()
