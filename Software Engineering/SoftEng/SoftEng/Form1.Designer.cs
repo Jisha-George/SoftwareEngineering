@@ -31,7 +31,7 @@
 			this.searchButton = new System.Windows.Forms.Button();
 			this.searchBox = new System.Windows.Forms.TextBox();
 			this.wutdis = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.resultView = new System.Windows.Forms.ListView();
+			this.listView = new System.Windows.Forms.ListBox();
 			this.SuspendLayout();
 			// 
 			// searchButton
@@ -51,20 +51,20 @@
 			this.searchBox.Size = new System.Drawing.Size(184, 20);
 			this.searchBox.TabIndex = 1;
 			// 
-			// resultView
+			// listView
 			// 
-			this.resultView.Location = new System.Drawing.Point(43, 62);
-			this.resultView.Name = "resultView";
-			this.resultView.Size = new System.Drawing.Size(710, 325);
-			this.resultView.TabIndex = 0;
-			this.resultView.UseCompatibleStateImageBehavior = false;
+			this.listView.FormattingEnabled = true;
+			this.listView.Location = new System.Drawing.Point(12, 58);
+			this.listView.Name = "listView";
+			this.listView.Size = new System.Drawing.Size(776, 329);
+			this.listView.TabIndex = 2;
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Controls.Add(this.resultView);
+			this.Controls.Add(this.listView);
 			this.Controls.Add(this.searchBox);
 			this.Controls.Add(this.searchButton);
 			this.Name = "Form1";
@@ -79,7 +79,7 @@
 		private System.Windows.Forms.Button searchButton;
 		private System.Windows.Forms.TextBox searchBox;
 		private System.Windows.Forms.ColumnHeader wutdis;
-		private System.Windows.Forms.ListView resultView;
+		private System.Windows.Forms.ListBox listView;
 	}
 }
 

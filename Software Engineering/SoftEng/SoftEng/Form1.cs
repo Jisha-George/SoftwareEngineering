@@ -24,7 +24,10 @@ namespace SoftEng
 			api name = new api("3db990c4&", "http://www.omdbapi.com/?apikey=");
 			string json = name.queryMovie("s=" + "Harry");
 			var searchResults = JsonConvert.DeserializeObject<RootObject>(json);
-			resultView. .Add(searchResults.Search[1].ToString());
+			foreach(var item in searchResults.Search)
+			{
+				listView.Items.Add(item.ToString());
+			}
 		}
 	}
 }
