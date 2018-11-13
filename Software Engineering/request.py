@@ -62,11 +62,3 @@ app.exec()
 #"http://www.omdbapi.com/?i=tt3896198&apikey=3db990c4"
 ##ui = interface()
 ##ui.dlg.pushButton.clicked.connect(ui.ACME)
-	
-
-
-
-
-
-
-
