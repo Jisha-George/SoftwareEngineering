@@ -5,40 +5,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Runtime.Serialization;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace SoftEng
 {
-	class movie
+	public class Search
 	{
 		public string Title { get; set; }
 		public string Year { get; set; }
-		public string imbdbID { get; set; }
+		public string imdbID { get; set; }
 		public string Type { get; set; }
 		public string Poster { get; set; }
 
-
 		public override string ToString()
 		{
-			return $"Title:{this.Title} Year:{this.Year} ID {this.Type}";
+			return $"Title: {this.Title} Year: {this.Year} ID:{this.imdbID} Type: {this.Type} Poster: {this.Poster}";
 		}
-
-
-
-
 	}
 
-	class movieList
+	public class RootObject
 	{
-		public List<movie> movie { get; set; }
+		public List<Search> Search { get; set; }
 		public string totalResults { get; set; }
 		public string Response { get; set; }
-
-
-		public movieList(string json)
-		{
-			var des = (movieList)Newtonsoft.Json.JsonConvert.DeserializeObject(json,typeof(movieList));
-			Console.ReadLine();
-		}
 	}
 }

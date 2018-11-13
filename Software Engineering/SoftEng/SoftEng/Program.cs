@@ -15,10 +15,6 @@ namespace SoftEng
 		[STAThread]
 		static void Main()
 		{
-			api name = new api("3db990c4&", "http://www.omdbapi.com/?apikey=");
-			string json = name.queryMovie("s=" + "Harry");
-			movieList list = new movieList(json);
-
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Form1());

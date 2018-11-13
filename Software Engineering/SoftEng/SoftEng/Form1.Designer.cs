@@ -30,6 +30,7 @@
 		{
 			this.searchButton = new System.Windows.Forms.Button();
 			this.searchBox = new System.Windows.Forms.TextBox();
+			this.wutdis = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.resultView = new System.Windows.Forms.ListView();
 			this.SuspendLayout();
 			// 
@@ -52,9 +53,9 @@
 			// 
 			// resultView
 			// 
-			this.resultView.Location = new System.Drawing.Point(256, 69);
+			this.resultView.Location = new System.Drawing.Point(43, 62);
 			this.resultView.Name = "resultView";
-			this.resultView.Size = new System.Drawing.Size(265, 294);
+			this.resultView.Size = new System.Drawing.Size(710, 325);
 			this.resultView.TabIndex = 0;
 			this.resultView.UseCompatibleStateImageBehavior = false;
 			// 
@@ -77,6 +78,7 @@
 
 		private System.Windows.Forms.Button searchButton;
 		private System.Windows.Forms.TextBox searchBox;
+		private System.Windows.Forms.ColumnHeader wutdis;
 		private System.Windows.Forms.ListView resultView;
 	}
 }

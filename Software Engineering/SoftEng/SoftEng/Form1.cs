@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
+using Newtonsoft.Json;
 
 namespace SoftEng
 {
@@ -21,10 +22,9 @@ namespace SoftEng
 		private void searchButton_Click(object sender, EventArgs e)
 		{
 			api name = new api("3db990c4&", "http://www.omdbapi.com/?apikey=");
-			ListViewItem itm;
-			string json = name.queryMovie("s="+searchBox.Text);
-			itm = new ListViewItem(json);
-			resultView.Items.Add(itm);
+			string json = name.queryMovie("s=" + "Harry");
+			var searchResults = JsonConvert.DeserializeObject<RootObject>(json);
+			resultView. .Add(searchResults.Search[1].ToString());
 		}
 	}
 }
