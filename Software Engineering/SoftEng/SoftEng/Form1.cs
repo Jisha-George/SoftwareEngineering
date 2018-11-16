@@ -22,7 +22,7 @@ namespace SoftEng
 		private void searchButton_Click(object sender, EventArgs e)
 		{
 			api name = new api("3db990c4&", "http://www.omdbapi.com/?apikey=");
-			string json = name.queryMovie("s=" + "Harry");
+			string json = name.queryMovie("s=" + searchBox.Text);
 			var searchResults = JsonConvert.DeserializeObject<RootObject>(json);
 			foreach(var item in searchResults.Search)
 			{

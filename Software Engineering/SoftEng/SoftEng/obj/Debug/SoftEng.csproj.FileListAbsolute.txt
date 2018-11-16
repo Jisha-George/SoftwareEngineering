@@ -11,3 +11,16 @@ C:\Users\Student\Desktop\BigGit-master\Software Engineering\SoftEng\SoftEng\obj\
 C:\Users\Student\Desktop\BigGit-master\Software Engineering\SoftEng\SoftEng\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Student\Desktop\BigGit-master\Software Engineering\SoftEng\SoftEng\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Student\Desktop\BigGit-master\Software Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.csproj.CopyComplete
+C:\Users\Student\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\bin\Debug\SoftEng.exe.config
+C:\Users\Student\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\bin\Debug\SoftEng.exe
+C:\Users\Student\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\bin\Debug\SoftEng.pdb
+C:\Users\Student\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Student\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Student\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.csprojAssemblyReference.cache
+C:\Users\Student\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.Form1.resources
+C:\Users\Student\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.Properties.Resources.resources
+C:\Users\Student\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.csproj.GenerateResource.cache
+C:\Users\Student\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.csproj.CoreCompileInputs.cache
+C:\Users\Student\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.csproj.CopyComplete
+C:\Users\Student\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.exe
+C:\Users\Student\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.pdb
