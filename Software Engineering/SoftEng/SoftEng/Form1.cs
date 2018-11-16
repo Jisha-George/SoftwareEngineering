@@ -12,22 +12,19 @@ using Newtonsoft.Json;
 
 namespace SoftEng
 {
-	public partial class Form1 : Form
+	public partial class Client : Form
 	{
-		public Form1()
+		public Client()
 		{
 			InitializeComponent();
+			SidePanel.Height = button1.Height;
+			movieSearchControl1.BringToFront();
 		}
 
-		private void searchButton_Click(object sender, EventArgs e)
+		private void button1_Click(object sender, EventArgs e)
 		{
-			api name = new api("3db990c4&", "http://www.omdbapi.com/?apikey=");
-			string json = name.queryMovie("s=" + searchBox.Text);
-			var searchResults = JsonConvert.DeserializeObject<RootObject>(json);
-			foreach(var item in searchResults.Search)
-			{
-				listView.Items.Add(item.ToString());
-			}
+			SidePanel.Height = button1.Height;
+			movieSearchControl1.BringToFront();
 		}
 	}
 }

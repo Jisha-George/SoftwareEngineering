@@ -19,7 +19,7 @@ namespace SoftEng
 
 		public override string ToString()
 		{
-			return $"Title: {this.Title} Year: ({this.Year}) ID:{this.imdbID} Type: {this.Type}";
+			return $"Title: {this.Title} Year: {this.Year} ID:{this.imdbID} Type: {this.Type}";
 		}
 	}
 
