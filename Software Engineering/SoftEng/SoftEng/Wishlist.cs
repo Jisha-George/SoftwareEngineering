@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,16 +7,21 @@ using System.Windows.Forms;
 
 namespace SoftEng
 {
-    public partial class WishList : UserControl
+    class Wishlist
     {
-        public WishList()
-        {
-            InitializeComponent();
-        }
+        private List<Search> wishList = new List<Search>();
+        public Wishlist()
+        {}
 
-        private void button2_Click(object sender, EventArgs e)
+        public void addToWishlist(ListBox listView, RootObject items)
         {
-
+            wishList.Add(items.Search[listView.SelectedIndex]);
         }
+        public void removeFromWishlist(ListBox listView, RootObject items)
+        {
+            wishList.Remove(items.Search[listView.SelectedIndex]);
+        }
+        public void saveWishlist() { }
+        public void loadWishlist() { }
     }
 }

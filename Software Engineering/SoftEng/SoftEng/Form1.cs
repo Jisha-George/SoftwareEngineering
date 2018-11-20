@@ -30,10 +30,6 @@ namespace SoftEng
 
         private void button1_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-=======
-            panel3.Height = button1.Height;
->>>>>>> master
 
         }
 
@@ -46,7 +42,6 @@ namespace SoftEng
         {
 
         }
-<<<<<<< HEAD
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -58,7 +53,5 @@ namespace SoftEng
             Wishlist wishlist = new Wishlist();
             wishlist.addToWishlist(listView,this.searchResults);
         }
-=======
->>>>>>> master
     }
 }
