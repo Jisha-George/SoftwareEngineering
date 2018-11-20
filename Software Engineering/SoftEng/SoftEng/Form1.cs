@@ -15,7 +15,8 @@ namespace SoftEng
 	public partial class Form1 : Form
 	{
         RootObject searchResults;
-		public Form1()
+        Wishlist wishlist = new Wishlist();
+        public Form1()
 		{
 			InitializeComponent();
 		}
@@ -50,8 +51,22 @@ namespace SoftEng
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Wishlist wishlist = new Wishlist();
-            wishlist.addToWishlist(listView,this.searchResults);
+            
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            wishlist.addToWishlist(listView, this.searchResults);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            wishlist.saveWishlist();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            wishlist.loadWishlist();
         }
     }
 }
