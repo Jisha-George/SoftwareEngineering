@@ -17,7 +17,7 @@ namespace SoftEng
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Client());
+			Application.Run(new Form1());
 		}
 	}
 }

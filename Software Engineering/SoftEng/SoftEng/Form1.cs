@@ -12,19 +12,46 @@ using Newtonsoft.Json;
 
 namespace SoftEng
 {
-	public partial class Client : Form
+	public partial class Form1 : Form
 	{
-		public Client()
+        RootObject searchResults;
+		public Form1()
 		{
 			InitializeComponent();
-			SidePanel.Height = button1.Height;
-			movieSearchControl1.BringToFront();
 		}
 
-		private void button1_Click(object sender, EventArgs e)
+		private void searchButton_Click(object sender, EventArgs e)
 		{
-			SidePanel.Height = button1.Height;
-			movieSearchControl1.BringToFront();
+			api name = new api("3db990c4&", "http://www.omdbapi.com/?apikey=");
+			string json = name.queryMovie("s=" + searchBox.Text);
+			this.searchResults = JsonConvert.DeserializeObject<RootObject>(json);
+            searchResults.movieListUI(listView);
 		}
-	}
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Wishlist wishlist = new Wishlist();
+            wishlist.addToWishlist(listView,this.searchResults);
+        }
+    }
 }
