@@ -32,6 +32,7 @@ namespace SoftEng
 
         public void movieListUI(ListBox listView)
         {
+            listView.Items.Clear();
             foreach (var item in Search)
             {
                 listView.Items.Add(item.ToString());

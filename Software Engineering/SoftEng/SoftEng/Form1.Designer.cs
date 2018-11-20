@@ -40,14 +40,16 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(563, 70);
+            this.searchButton.Location = new System.Drawing.Point(663, 108);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(75, 23);
+            this.searchButton.Size = new System.Drawing.Size(127, 35);
             this.searchButton.TabIndex = 0;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
@@ -55,17 +57,21 @@
             // 
             // searchBox
             // 
-            this.searchBox.Location = new System.Drawing.Point(307, 73);
+            this.searchBox.Location = new System.Drawing.Point(246, 108);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.searchBox.Multiline = true;
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(240, 20);
+            this.searchBox.Size = new System.Drawing.Size(409, 35);
             this.searchBox.TabIndex = 1;
             // 
             // listView
             // 
             this.listView.FormattingEnabled = true;
-            this.listView.Location = new System.Drawing.Point(207, 120);
+            this.listView.ItemHeight = 20;
+            this.listView.Location = new System.Drawing.Point(246, 185);
+            this.listView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(659, 407);
+            this.listView.Size = new System.Drawing.Size(986, 484);
             this.listView.TabIndex = 2;
             // 
             // panel1
@@ -76,18 +82,16 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(141, 586);
+            this.panel1.Size = new System.Drawing.Size(212, 924);
             this.panel1.TabIndex = 3;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel3.Location = new System.Drawing.Point(1, 70);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Location = new System.Drawing.Point(2, 108);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(13, 46);
+            this.panel3.Size = new System.Drawing.Size(20, 71);
             this.panel3.TabIndex = 5;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -96,10 +100,9 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(2, 120);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(3, 185);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 44);
+            this.button2.Size = new System.Drawing.Size(206, 68);
             this.button2.TabIndex = 5;
             this.button2.Text = "Wishlist";
             this.button2.UseVisualStyleBackColor = true;
@@ -111,10 +114,9 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(2, 73);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(3, 112);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 44);
+            this.button1.Size = new System.Drawing.Size(206, 68);
             this.button1.TabIndex = 5;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = false;
@@ -124,47 +126,49 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(141, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(212, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(795, 27);
+            this.panel2.Size = new System.Drawing.Size(1274, 42);
             this.panel2.TabIndex = 4;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(644, 70);
+            this.button3.Location = new System.Drawing.Point(798, 108);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(127, 35);
             this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
+            this.button3.Text = "AddWishList";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(725, 71);
+            this.button4.Location = new System.Drawing.Point(933, 108);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(124, 35);
             this.button4.TabIndex = 6;
-            this.button4.Text = "button4";
+            this.button4.Text = "SaveWishList";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(806, 70);
+            this.button5.Location = new System.Drawing.Point(1065, 108);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(127, 35);
             this.button5.TabIndex = 7;
-            this.button5.Text = "button5";
+            this.button5.Text = "LoadWishList";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 586);
+            this.ClientSize = new System.Drawing.Size(1486, 924);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -173,7 +177,8 @@
             this.Controls.Add(this.listView);
             this.Controls.Add(this.searchBox);
             this.Controls.Add(this.searchButton);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -198,6 +203,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
