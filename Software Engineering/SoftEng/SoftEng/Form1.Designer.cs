@@ -28,51 +28,16 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.searchButton = new System.Windows.Forms.Button();
-            this.searchBox = new System.Windows.Forms.TextBox();
             this.wutdis = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.searchUI1 = new SoftEng.SearchUI();
+            this.wishListUI1 = new SoftEng.WishListUI();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // searchButton
-            // 
-            this.searchButton.Location = new System.Drawing.Point(663, 108);
-            this.searchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(127, 35);
-            this.searchButton.TabIndex = 0;
-            this.searchButton.Text = "Search";
-            this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
-            // 
-            // searchBox
-            // 
-            this.searchBox.Location = new System.Drawing.Point(246, 108);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.searchBox.Multiline = true;
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(409, 35);
-            this.searchBox.TabIndex = 1;
-            // 
-            // listView
-            // 
-            this.listView.FormattingEnabled = true;
-            this.listView.ItemHeight = 20;
-            this.listView.Location = new System.Drawing.Point(246, 185);
-            this.listView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(986, 484);
-            this.listView.TabIndex = 2;
             // 
             // panel1
             // 
@@ -131,52 +96,29 @@
             this.panel2.Size = new System.Drawing.Size(1274, 42);
             this.panel2.TabIndex = 4;
             // 
-            // button3
+            // searchUI1
             // 
-            this.button3.Location = new System.Drawing.Point(798, 108);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 35);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "AddWishList";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.searchUI1.Location = new System.Drawing.Point(212, 108);
+            this.searchUI1.Name = "searchUI1";
+            this.searchUI1.Size = new System.Drawing.Size(1100, 570);
+            this.searchUI1.TabIndex = 6;
             // 
-            // button4
+            // wishListUI1
             // 
-            this.button4.Location = new System.Drawing.Point(933, 108);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(124, 35);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "SaveWishList";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(1065, 108);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(127, 35);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "LoadWishList";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.wishListUI1.Location = new System.Drawing.Point(212, 108);
+            this.wishListUI1.Name = "wishListUI1";
+            this.wishListUI1.Size = new System.Drawing.Size(1100, 570);
+            this.wishListUI1.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1486, 924);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.searchUI1);
+            this.Controls.Add(this.wishListUI1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.listView);
-            this.Controls.Add(this.searchBox);
-            this.Controls.Add(this.searchButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
@@ -185,25 +127,18 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
 		}
 
 		#endregion
-
-		private System.Windows.Forms.Button searchButton;
-		private System.Windows.Forms.TextBox searchBox;
 		private System.Windows.Forms.ColumnHeader wutdis;
-		private System.Windows.Forms.ListBox listView;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private WishListUI wishListUI1;
+        public SearchUI searchUI1;
     }
 }
 

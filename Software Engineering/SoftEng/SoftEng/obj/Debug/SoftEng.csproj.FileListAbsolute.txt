@@ -36,4 +36,6 @@ C:\Users\User\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\obj\D
 C:\Users\User\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.csproj.CopyComplete
 C:\Users\User\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.exe
 C:\Users\User\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.pdb
+C:\Users\User\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.WishListUI.resources
+C:\Users\User\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.SearchUI.resources
 C:\Users\User\Documents\GitHub\BigGit\Software Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.csprojResolveAssemblyReference.cache

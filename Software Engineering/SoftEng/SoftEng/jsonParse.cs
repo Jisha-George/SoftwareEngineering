@@ -24,7 +24,7 @@ namespace SoftEng
 		}
 	}
 
-	public class RootObject
+	public class RootObject:Form1
 	{
 		public List<Search> Search { get; set; }
 		public string totalResults { get; set; }
@@ -32,10 +32,10 @@ namespace SoftEng
 
         public void movieListUI(ListBox listView)
         {
-            listView.Items.Clear();
+            searchUI1.listView.Items.Clear();
             foreach (var item in Search)
             {
-                listView.Items.Add(item.ToString());
+                searchUI1.listView.Items.Add(item.ToString());
             }
         }
 	}

@@ -24,5 +24,10 @@ namespace SoftEng
 			string json = new WebClient().DownloadString(call + title);
 			return json;
 		}
-	}
+
+        internal string queryMovie(object p)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

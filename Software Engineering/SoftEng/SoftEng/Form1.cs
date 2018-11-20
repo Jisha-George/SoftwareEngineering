@@ -19,24 +19,27 @@ namespace SoftEng
         public Form1()
 		{
 			InitializeComponent();
+            panel3.Height = button1.Height;
+            panel3.Top = button1.Top;
+            searchUI1.BringToFront();
+            
 		}
 
 		private void searchButton_Click(object sender, EventArgs e)
 		{
-			api name = new api("3db990c4&", "http://www.omdbapi.com/?apikey=");
-			string json = name.queryMovie("s=" + searchBox.Text);
-			this.searchResults = JsonConvert.DeserializeObject<RootObject>(json);
-            searchResults.movieListUI(listView);
+			
 		}
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            panel3.Height = button1.Height;
+            searchUI1.BringToFront();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            panel3.Height = button2.Height;
+            wishListUI1.BringToFront();
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -56,7 +59,7 @@ namespace SoftEng
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            wishlist.addToWishlist(listView, this.searchResults);
+            wishlist.addToWishlist(searchUI1.listView, this.searchResults);
         }
 
         private void button4_Click(object sender, EventArgs e)
