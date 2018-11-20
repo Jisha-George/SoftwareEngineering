@@ -9,9 +9,9 @@ using Newtonsoft.Json;
 
 namespace SoftEng
 {
-    class Wishlist
+    public class Wishlist
     {
-        private List<Search> wishList = new List<Search>();
+        public List<Search> wishList = new List<Search>();
         public Wishlist()
         {}
 
@@ -32,5 +32,13 @@ namespace SoftEng
             string contents = File.ReadAllText(Environment.CurrentDirectory + @"\wishlist.json");
             wishList = JsonConvert.DeserializeObject<List<Search>>(contents);
         }
+		public void displayToUI(ListBox listView2)
+		{
+			listView2.Items.Clear();
+			foreach (var item in wishList)
+			{
+				listView2.Items.Add(item.ToString());
+			}
+		}
     }
 }

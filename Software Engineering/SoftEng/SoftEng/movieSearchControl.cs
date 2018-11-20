@@ -13,6 +13,8 @@ namespace SoftEng
 {
 	public partial class movieSearchControl : UserControl
 	{
+		RootObject searchResults = new RootObject();
+		Wishlist wishlist = new Wishlist();
 		public movieSearchControl()
 		{
 			InitializeComponent();
@@ -22,12 +24,14 @@ namespace SoftEng
 		{
 			api name = new api("3db990c4&", "http://www.omdbapi.com/?apikey=");
 			string json = name.queryMovie("s=" + searchBox.Text);
-			var searchResults = JsonConvert.DeserializeObject<RootObject>(json);
-            listView.Items.Clear();
-			foreach (var item in searchResults.Search)
-			{
-				listView.Items.Add(item.ToString());
-			}
+			searchResults = JsonConvert.DeserializeObject<RootObject>(json);
+			searchResults.movieListUI(listView);
+
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			wishlist.addToWishlist(listView,searchResults);
 		}
 	}
 }

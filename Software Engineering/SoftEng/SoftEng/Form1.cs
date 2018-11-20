@@ -14,59 +14,19 @@ namespace SoftEng
 {
 	public partial class Form1 : Form
 	{
-        RootObject searchResults;
-        Wishlist wishlist = new Wishlist();
         public Form1()
 		{
 			InitializeComponent();
 		}
 
-		private void searchButton_Click(object sender, EventArgs e)
+		private void button3_Click(object sender, EventArgs e)
 		{
-			api name = new api("3db990c4&", "http://www.omdbapi.com/?apikey=");
-			string json = name.queryMovie("s=" + searchBox.Text);
-			this.searchResults = JsonConvert.DeserializeObject<RootObject>(json);
-            searchResults.movieListUI(listView);
+			wishListUI1.BringToFront();
 		}
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            wishlist.addToWishlist(listView, this.searchResults);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            wishlist.saveWishlist();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            wishlist.loadWishlist();
-        }
-    }
+		private void button1_Click(object sender, EventArgs e)
+		{
+			movieSearchControl1.BringToFront();
+		}
+	}
 }

@@ -15,6 +15,7 @@ namespace SoftEng
 		[STAThread]
 		static void Main()
 		{
+			Wishlist wishlist = new Wishlist();
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Form1());
