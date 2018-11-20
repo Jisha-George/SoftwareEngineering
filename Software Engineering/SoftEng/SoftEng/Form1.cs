@@ -32,6 +32,7 @@ namespace SoftEng
 
         private void button1_Click(object sender, EventArgs e)
         {
+            panel3.Height = button1.Height;
 
         }
 
