@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace SoftEng
 {
@@ -21,7 +23,14 @@ namespace SoftEng
         {
             wishList.Remove(items.Search[listView.SelectedIndex]);
         }
-        public void saveWishlist() { }
-        public void loadWishlist() { }
+        public void saveWishlist()
+        {
+            File.WriteAllText(Environment.CurrentDirectory + @"\wishlist.json", JsonConvert.SerializeObject(wishList));
+        }
+        public void loadWishlist()
+        {
+            string contents = File.ReadAllText(Environment.CurrentDirectory + @"\wishlist.json");
+            wishList = JsonConvert.DeserializeObject<List<Search>>(contents);
+        }
     }
 }
