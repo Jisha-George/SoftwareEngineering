@@ -34,48 +34,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.button4 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
-			this.listBox1 = new System.Windows.Forms.ListBox();
-			this.SuspendLayout();
-			// 
-			// button4
-			// 
-			this.button4.Location = new System.Drawing.Point(85, 19);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(83, 23);
-			this.button4.TabIndex = 7;
-			this.button4.Text = "SaveWishList";
-			this.button4.UseVisualStyleBackColor = true;
-			// 
-			// button5
-			// 
-			this.button5.Location = new System.Drawing.Point(174, 19);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(85, 23);
-			this.button5.TabIndex = 8;
-			this.button5.Text = "LoadWishList";
-			this.button5.UseVisualStyleBackColor = true;
-			// 
-			// listBox1
-			// 
-			this.listBox1.FormattingEnabled = true;
-			this.listBox1.Location = new System.Drawing.Point(85, 47);
-			this.listBox1.Name = "listBox1";
-			this.listBox1.Size = new System.Drawing.Size(962, 615);
-			this.listBox1.TabIndex = 9;
-			// 
-			// WishListUI
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.listBox1);
-			this.Controls.Add(this.button5);
-			this.Controls.Add(this.button4);
-			this.Margin = new System.Windows.Forms.Padding(2);
-			this.Name = "WishListUI";
-			this.Size = new System.Drawing.Size(1140, 724);
-			this.ResumeLayout(false);
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.SuspendLayout();
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(113, 23);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(111, 28);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "SaveWishList";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(232, 23);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(113, 28);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "LoadWishList";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(113, 58);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(1281, 756);
+            this.listBox1.TabIndex = 9;
+            // 
+            // WishListUI
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "WishListUI";
+            this.Size = new System.Drawing.Size(1520, 891);
+            this.ResumeLayout(false);
 
         }
 
