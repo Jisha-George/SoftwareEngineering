@@ -16,5 +16,16 @@ namespace SoftEng
         {
             InitializeComponent();
         }
-	}
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Wishlist.saveWishlist();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Wishlist.loadWishlist();
+            Wishlist.displayToUI(listBox1);
+        }
+    }
 }
