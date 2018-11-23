@@ -27,5 +27,11 @@ namespace SoftEng
             Wishlist.loadWishlist();
             Wishlist.displayToUI(listBox1);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Wishlist.removeFromWishlist(listBox1, Wishlist.wishList);
+            Wishlist.displayToUI(listBox1);
+        }
     }
 }

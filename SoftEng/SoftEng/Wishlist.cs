@@ -11,15 +11,15 @@ namespace SoftEng
 {
     public static class Wishlist
     {
-        private static List<Search> wishList = new List<Search>();
+        public static List<Search> wishList = new List<Search>();
 
         public static void addToWishlist(ListBox listView, RootObject items)
         {
             wishList.Add(items.Search[listView.SelectedIndex]);
         }
-        public static void removeFromWishlist(ListBox listView, RootObject items)
+        public static void removeFromWishlist(ListBox listView, List<Search> items)
         {
-            wishList.Remove(items.Search[listView.SelectedIndex]);
+            wishList.Remove(items[listView.SelectedIndex]);
         }
         public static void saveWishlist()
         {

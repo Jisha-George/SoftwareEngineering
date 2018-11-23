@@ -17,16 +17,23 @@ namespace SoftEng
         public Form1()
 		{
 			InitializeComponent();
-		}
+            panel3.Height = button1.Height;
+            panel3.Top = button1.Top;
+            movieSearchControl1.BringToFront();
+        }
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			wishListUI1.showUI();
-		}
+            panel3.Height = button3.Height;
+            panel3.Top = button3.Top;
+            wishListUI1.showUI();
+        }
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			movieSearchControl1.BringToFront();
-		}
+            panel3.Height = button1.Height;
+            panel3.Top = button1.Top;
+            movieSearchControl1.BringToFront();
+        }
 	}
 }
