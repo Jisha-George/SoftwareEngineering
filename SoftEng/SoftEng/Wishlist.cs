@@ -15,7 +15,19 @@ namespace SoftEng
 
         public static void addToWishlist(ListBox listView, RootObject items)
         {
-            wishList.Add(items.Search[listView.SelectedIndex]);
+            
+            if (items.Search != null)
+            {
+
+                wishList.Add(items.Search[listView.SelectedIndex]);
+            }
+
+            else if (items.results != null)
+            {
+                wishList.Add(items.results[listView.SelectedIndex]);
+
+
+            }
         }
         public static void removeFromWishlist(ListBox listView, List<Search> items)
         {
