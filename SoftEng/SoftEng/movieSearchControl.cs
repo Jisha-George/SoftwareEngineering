@@ -61,8 +61,6 @@ namespace SoftEng
                 searchResults = JsonConvert.DeserializeObject<RootObject>(json);
                 searchResults.movieListUI(listView);
             }
-            //searchResults = JsonConvert.DeserializeObject<Search>(json);
-            //searchResults.movieListUI(listView);
 
         }
     }
