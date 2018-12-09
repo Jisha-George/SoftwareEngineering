@@ -56,17 +56,17 @@
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(277, 18);
+            this.searchButton.Location = new System.Drawing.Point(277, 17);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(75, 22);
+            this.searchButton.Size = new System.Drawing.Size(84, 22);
             this.searchButton.TabIndex = 3;
-            this.searchButton.Text = "Search";
+            this.searchButton.Text = "omdb Search";
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(435, 18);
+            this.button1.Location = new System.Drawing.Point(439, 17);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 23);
             this.button1.TabIndex = 6;
@@ -76,17 +76,17 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(583, 18);
+            this.button2.Location = new System.Drawing.Point(363, 17);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 7;
-            this.button2.Text = "API #2";
+            this.button2.Text = "tmdb Search";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(356, 18);
+            this.button3.Location = new System.Drawing.Point(582, 17);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 8;
