@@ -34,8 +34,10 @@ namespace SoftEng
 		public bool adult { get; set; }
 		public string overview { get; set; }
 		public string release_date { get; set; }
+        public string Source { get; set; }
+        public string Value { get; set; }
 
-		public override string ToString()
+        public override string ToString()
 		{
 			if (this.Title != null)
 			{
@@ -45,7 +47,7 @@ namespace SoftEng
 			else if (this.title != null)
 			{
 
-				return $"Title: {this.title} Year: ({this.release_date}) ID:{this.id} Type: {this.poster_path}";
+				return $"Title: {this.title} Year: ({this.release_date}) ID:{this.id}";
 			}
 
 			else { return $"Error"; }
@@ -68,7 +70,17 @@ namespace SoftEng
 
 		public List<Search> results { get; set; }
 
-		public void movieListUI(ListBox listView)
+        public string Title { get; set; }
+        public string Released { get; set; }
+        public string imdbID { get; set; }
+        public string Genre { get; set; }
+
+        public override string ToString()
+        {
+            return $"Title: {this.Title} Year: ({this.Released}) ID:{this.imdbID} Type: {this.Genre}";
+        }
+
+        public void movieListUI(ListBox listView)
         {
 
 			if (Search != null)
@@ -91,6 +103,12 @@ namespace SoftEng
 
 
 			}
+
+            else if(this != null)
+            {
+                listView.Items.Clear();
+                listView.Items.Add(this);
+            }
            
 
 

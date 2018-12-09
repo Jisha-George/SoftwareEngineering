@@ -43,5 +43,27 @@ namespace SoftEng
 			searchResults.movieListUI(listView);
 
 		}
-	}
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            int randomID= random.Next(1000001, 3000000);
+
+            // https://api.themoviedb.org/3/search/movie?api_key=f1f657aa41450d44b2da1700714b44c9&query=harry
+            api name = new api("3db990c4&", "http://www.omdbapi.com/?apikey=");
+            string json = name.queryMovie("?&i=tt" + randomID.ToString());
+            if (json == "{\"Response\":\"False\",\"Error\":\"Error getting data.\"}")
+            {
+                button3_Click(this, null);
+            }
+            else
+            {
+                searchResults = JsonConvert.DeserializeObject<RootObject>(json);
+                searchResults.movieListUI(listView);
+            }
+            //searchResults = JsonConvert.DeserializeObject<Search>(json);
+            //searchResults.movieListUI(listView);
+
+        }
+    }
 }
